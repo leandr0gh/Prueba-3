@@ -71,4 +71,22 @@ public class Empresa {
  
         System.out.println(normales + "-" + temporales + "-" + porVenta);
     }
+    
+    public static void main(String[] args) {
+        agregarEmpleado(1, "Leandro Sandoval", "NORMAL");
+        agregarEmpleado(2, "Alex Lopez", "TEMPORAL");
+        agregarEmpleado(3, "Jose Jose", "VENTA");
+        
+        setFechaFin(2, 2027, 12, 31); // vigente
+        setFechaFin(4, 2020, 1, 1); //vencio
+        registrarVenta(3, 15000);
+        registrarVenta(3, 8000);
+
+        for (int codigo = 1; codigo <= 4; codigo++) {
+            System.out.println("Pago empleado " + codigo + ": Lps. " + pagarEmpleado(codigo));
+        }
+        
+        
+    }
 }
+ 
